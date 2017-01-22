@@ -13,7 +13,7 @@
 require 'nn'
 require 'cunn'
 require 'cudnn'
-require 'ConvolutionalDropout/ConvolutionalDropout'
+require 'models/ConvolutionalDropout/ConvolutionalDropout'
 
 local M = {}
 
