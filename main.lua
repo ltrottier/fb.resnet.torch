@@ -59,7 +59,7 @@ for epoch = startEpoch, opt.nEpochs do
       bestModel = true
       bestTop1 = testTop1
       bestTop5 = testTop5
-      print(' * Best model ', testTop1, testTop5)
+      --print(' * Best model ', testTop1, testTop5)
    end
 
    checkpoints.save(epoch, model, trainer.optimState, bestModel, opt)
