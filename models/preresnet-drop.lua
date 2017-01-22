@@ -140,7 +140,7 @@ local function createModel(opt)
       assert(cfg[depth], 'Invalid depth: ' .. tostring(depth))
       local def, nFeatures, block = table.unpack(cfg[depth])
       iChannels = 64
-      print(' | ResNet-' .. depth .. ' ImageNet')
+      --print(' | ResNet-' .. depth .. ' ImageNet')
 
       -- The ResNet ImageNet model
       model:add(Convolution(3,64,7,7,2,2,3,3))
@@ -161,7 +161,7 @@ local function createModel(opt)
       assert((depth - 2) % 6 == 0, 'depth should be one of 20, 32, 44, 56, 110, 1202')
       local n = (depth - 2) / 6
       iChannels = 16
-      print(' | ResNet-' .. depth .. ' CIFAR-10')
+      --print(' | ResNet-' .. depth .. ' CIFAR-10')
 
       -- The ResNet CIFAR-10 model
       model:add(Convolution(3,16,3,3,1,1,1,1))
@@ -181,7 +181,7 @@ local function createModel(opt)
       assert((depth - 2) % 6 == 0, 'depth should be one of 20, 32, 44, 56, 110, 1202')
       local n = (depth - 2) / 6
       iChannels = 16
-      print(' | ResNet-' .. depth .. ' CIFAR-100')
+      --print(' | ResNet-' .. depth .. ' CIFAR-100')
 
       -- The ResNet CIFAR-100 model
       model:add(Convolution(3,16,3,3,1,1,1,1))
