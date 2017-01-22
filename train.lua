@@ -44,7 +44,7 @@ function Trainer:train(epoch, dataloader)
    local top1Sum, top5Sum, lossSum = 0.0, 0.0, 0.0
    local N = 0
 
-   print('=> Training epoch # ' .. epoch)
+   -- print('=> Training epoch # ' .. epoch)
    -- set the batch norm to training mode
    self.model:training()
    for n, sample in dataloader:run() do
