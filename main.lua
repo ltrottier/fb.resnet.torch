@@ -65,4 +65,4 @@ for epoch = startEpoch, opt.nEpochs do
    checkpoints.save(epoch, model, trainer.optimState, bestModel, opt)
 end
 
-print(string.format(' * Finished top1: %6.3f  top5: %6.3f', bestTop1, bestTop5))
+--print(string.format(' * Finished top1: %6.3f  top5: %6.3f', bestTop1, bestTop5))

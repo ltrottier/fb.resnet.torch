@@ -117,7 +117,7 @@ function Trainer:test(epoch, dataloader)
    end
    self.model:training()
 
-   print(('%d, %7.3f, %7.3f\n'):format(
+   print(('%d, %7.3f, %7.3f'):format(
       epoch, top1Sum / N, top5Sum / N))
 
    return top1Sum / N, top5Sum / N
