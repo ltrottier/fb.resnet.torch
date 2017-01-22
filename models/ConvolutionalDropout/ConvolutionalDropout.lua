@@ -74,5 +74,5 @@ function ConvolutionalDropout:clearState()
       self.mask:set()
       self.pattern:set()
    end
-   return Parent.clearState(self)
+   return parent.clearState(self)
 end
