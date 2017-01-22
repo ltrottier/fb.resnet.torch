@@ -1,10 +1,12 @@
 function hanning(n)
-    return torch.range(0,n-1):mul(2*math.pi):div(n-1):cos():mul(-1):add(1):div(2)
+    local k = n+2
+    local w = torch.range(0,k-1):mul(2*math.pi):div(k-1):cos():mul(-1):add(1):div(2)
+    return w[{ {2,n+1} }]
 end
 
 function hanning2(n)
     local t = hanning(n):reshape(n,1)
-    return torch.cmul(t:expand(n,n), t:expand(n,n):t())
+    return torch.add(t:expand(n,n), t:expand(n,n):t()) / 2
 end
 
 function hanning2mask(n)
